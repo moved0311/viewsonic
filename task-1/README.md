@@ -14,4 +14,5 @@ pnpm start
 
 ## Video
 
-![demo](./task-1.mov)
+https://github.com/moved0311/viewsonic/assets/10309507/e445fa63-d30f-4cff-b366-d72543f09f5b
+
