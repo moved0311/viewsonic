@@ -1,0 +1,8 @@
+.parcel-cache
+dist
+node_modules
+
+# System Files
+.DS_Store
+Thumbs.db
+*.pem
