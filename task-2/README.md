@@ -17,3 +17,6 @@ pnpm start
 ```
 
 ## Video
+
+https://github.com/moved0311/viewsonic/assets/10309507/2490a345-7c68-47f0-bdbf-0d1efc127a52
+
