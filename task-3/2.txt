@@ -1,36 +1,6 @@
 2. Can we stop what "function1" is doing? How?
 
-Yes, We can use cancel from `redux-saga/effects` to cancel the currently running function1.
+可以。呼叫function2來中斷request。
 
-```js
-let ctrl;
-
-function* watchFunction1() {
-    let task = yield fork(function1, action);
-
-    if (task) {
-      ctrl.abort(); 
-      yield cancel(task); 
-    }
-  }
-}
-```
-
-
-It appears that the generator function can be stopped using Generator.return(). When encountering a return, it sets the return value's done property to true.
-
-```js
-function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
-
-const g = gen();
-
-g.next(); // { value: 1, done: false }
-g.return(); // { value: undefined, done: true }
-```
-
-reference:
-* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return
+透過`ctrl = new AbortController()`將`ctrl.signal`當成axios的config傳進去
+之後可以夠過`ctrl.abort()`來中斷axios發送的request
